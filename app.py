@@ -8,7 +8,7 @@ st.set_page_config(page_title="Round 2 : AI Bias Detection", page_icon="🕵️"
 @st.cache_data # This keeps the data in memory so it doesn't reload every click
 def load_data():
     try:
-        df = pd.read_csv(r'C:\Users\HP\Downloads\New folder\dataset_bias.csv')
+        df = pd.read_csv('bot2_dataset.csv')
         # Convert the Question and Response columns into a searchable dictionary
         return dict(zip(df['Question'], df['Biased_Response']))
     except FileNotFoundError:
@@ -63,4 +63,5 @@ if prompt := st.chat_input("Enter your question..."):
     # Display assistant response
     with st.chat_message("assistant"):
         st.markdown(response)
+
     st.session_state.messages.append({"role": "assistant", "content": response})
