@@ -43,7 +43,7 @@ with st.sidebar:
         st.rerun()
 
 # 5. UI Layout
-st.title("🤖 Bot 2: Framing Analysis")
+st.title("Round 2 : AI Bias Detection")
 st.info("System Status: Active. Framing Mechanism: Enabled.")
 
 # Display chat messages from history on app rerun
@@ -66,4 +66,5 @@ if prompt := st.chat_input("Enter your question..."):
         st.markdown(response)
 
     st.session_state.messages.append({"role": "assistant", "content": response})
+
 
