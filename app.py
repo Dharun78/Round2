@@ -35,6 +35,7 @@ with st.sidebar:
 4.Emotional framing
 
 - Rewrite a neutral, evidence-bounded version
+- Input your questions exactly as printed. Ensure all capitalization matches the prompt sheet.
 - Personal opinions will not be evaluated. Only analytical identification and correction of bias will be scored.
     """)
     if st.button("Clear Chat"):
@@ -65,3 +66,4 @@ if prompt := st.chat_input("Enter your question..."):
         st.markdown(response)
 
     st.session_state.messages.append({"role": "assistant", "content": response})
+
